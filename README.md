@@ -1,16 +1,58 @@
-# fanpage2
+# fanpage
 
-A new Flutter project.
+This app was developed for iOS and Android using Android Studio and implements use of the API firebase.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
+Resources used in guiding the development of this project:
+- [FlutterFire Overview](https://firebase.flutter.dev/docs/overview/)
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Guidelines
+To create and publish an app on two of the following platforms: iOS, Android, Web
+Create a Splash Screen
+Integrate the Firebase API into your mobile application
+Set up User Registration and User Login pages
+Assign Admin to 1 User
+Admin should be able to post messages
+Users should be able to view messages
+
+## Firebase & Cloud Firestore
+- Cloud Firestore stores unique user id, user first name, user last name,
+user role ( defaults to customer ), and registration datetime
+- Firebase Authentication should be able to accept email and password, and at
+least one social media login
+- Users who are not adminis will not be able to post any messages but can view them
+
+
+# Dependencies and Plugins
+## Google and Firebase:
+Inside 'build.gradle' file under the 'android/app' folder, add these implementations in the 'dependencies {}' section:
+
+implementation platform('com.google.firebase:firebase-bom:28.1.0')
+implementation 'com.google.firebase:firebase-analytics-ktx'
+implementation 'com.android.support:multidex:1.0.3'
+implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+// Declare the dependency for the Firebase Authentication library
+// When using the BoM, you don't specify versions in Firebase library dependencies
+implementation 'com.google.firebase:firebase-auth'
+
+// Also declare the dependency for the Google Play services library and specify its version
+implementation 'com.google.android.gms:play-services-auth:19.0.0'
+Do the same for the other 'build.gradle' file that is inside the 'android' folder, add these implementations in the 'dependencies {}' section:
+
+classpath 'com.android.tools.build:gradle:4.1.0'
+classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+classpath 'com.google.gms:google-services:4.3.8'
+
+
+## pubspec.yaml:
+flutter sdk version 
+sdk: ">=2.12.0 <3.0.0"
+
+firebase_core: ^1.3.0
+firebase_auth: ^1.4.1
+cloud_firestore: ^2.2.2
+google_sign_in: "^4.5.1"
+flutter_signin_button: ^2.0.0 
