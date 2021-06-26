@@ -34,13 +34,8 @@ implementation 'com.google.firebase:firebase-analytics-ktx'
 implementation 'com.android.support:multidex:1.0.3'
 implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-// Declare the dependency for the Firebase Authentication library
-// When using the BoM, you don't specify versions in Firebase library dependencies
-implementation 'com.google.firebase:firebase-auth'
 
-// Also declare the dependency for the Google Play services library and specify its version
-implementation 'com.google.android.gms:play-services-auth:19.0.0'
-Do the same for the other 'build.gradle' file that is inside the 'android' folder, add these implementations in the 'dependencies {}' section:
+Inside 'build.gradle' file that is inside the 'android' folder, add these implementations in the 'dependencies {}' section:
 
 classpath 'com.android.tools.build:gradle:4.1.0'
 classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
