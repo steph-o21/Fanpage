@@ -14,8 +14,8 @@ Create a Splash Screen
 Integrate the Firebase API into your mobile application
 Set up User Registration and User Login pages
 Assign Admin to 1 User
-Admin should be able to post messages
-Users should be able to view messages
+Admin should be able to post messages (admin email: strawberry@test.com, password: 12qwaszx)
+Users should be able to view messages (test user email: test1@test.com, password: password)
 
 ## Firebase & Cloud Firestore
 - Cloud Firestore stores unique user id, user first name, user last name,
